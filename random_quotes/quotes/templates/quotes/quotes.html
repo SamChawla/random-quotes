@@ -1,0 +1,32 @@
+{% extends 'quotes/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content%}
+	<div id="top"></div>
+	<!-- Start Header Area -->
+	<header class="default-header">
+		<div class="sticky-header">
+			<div class="container">
+				<div class="header-content">
+						<a href="#top" class="text-center"><h1 class="text-center">"QUOTE OF THE DAY"</h1></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+	<!-- Start Quote Area -->
+	<section class="banner-area relative">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row fullscreen justify-content-center align-items-center">
+				<div class="col-lg-8">
+					<div class="banner-content text-center">
+						<h1 class="text-uppercase text-white">{{quote.quote_text}}</h1>
+						<p class="text-uppercase text-white">- {{quote.quote_by}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Quote Area -->
+{% endblock content%}
